@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C15BC5FD2BBB004700C79750 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = C15BC5FC2BBB004700C79750 /* FSCalendar */; };
 		C1CBF00C2BBAC9330057FEF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF00B2BBAC9330057FEF2 /* AppDelegate.swift */; };
 		C1CBF0102BBAC9330057FEF2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF00F2BBAC9330057FEF2 /* MainTabBarController.swift */; };
 		C1CBF0152BBAC9330057FEF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1CBF0142BBAC9330057FEF2 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C15BC5FD2BBB004700C79750 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +109,9 @@
 			dependencies = (
 			);
 			name = Schedule;
+			packageProductDependencies = (
+				C15BC5FC2BBB004700C79750 /* FSCalendar */,
+			);
 			productName = Schedule;
 			productReference = C1CBF0082BBAC9330057FEF2 /* Schedule.app */;
 			productType = "com.apple.product-type.application";
@@ -135,6 +140,9 @@
 				Base,
 			);
 			mainGroup = C1CBEFFF2BBAC9320057FEF2;
+			packageReferences = (
+				C15BC5FB2BBB004700C79750 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = C1CBF0092BBAC9330057FEF2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -376,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C15BC5FB2BBB004700C79750 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C15BC5FC2BBB004700C79750 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C15BC5FB2BBB004700C79750 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C1CBF0002BBAC9320057FEF2 /* Project object */;
 }
