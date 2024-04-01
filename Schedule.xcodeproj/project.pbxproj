@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C15BC5FD2BBB004700C79750 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = C15BC5FC2BBB004700C79750 /* FSCalendar */; };
+		C15BC6002BBB465000C79750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15BC5FF2BBB465000C79750 /* LaunchScreen.storyboard */; };
 		C1CBF00C2BBAC9330057FEF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF00B2BBAC9330057FEF2 /* AppDelegate.swift */; };
 		C1CBF0102BBAC9330057FEF2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF00F2BBAC9330057FEF2 /* MainTabBarController.swift */; };
 		C1CBF0152BBAC9330057FEF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1CBF0142BBAC9330057FEF2 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C15BC5FF2BBB465000C79750 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1CBF0082BBAC9330057FEF2 /* Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CBF00B2BBAC9330057FEF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1CBF00F2BBAC9330057FEF2 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C15BC5FE2BBB45FE00C79750 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C15BC5FF2BBB465000C79750 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C1CBEFFF2BBAC9320057FEF2 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		C1CBF00A2BBAC9330057FEF2 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				C15BC5FE2BBB45FE00C79750 /* Views */,
 				C1CBF01F2BBAD2730057FEF2 /* Application */,
 				C1CBF0202BBAD2D10057FEF2 /* Controllers */,
 				C1CBF0212BBAD3100057FEF2 /* Resources */,
@@ -158,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1CBF0152BBAC9330057FEF2 /* Assets.xcassets in Resources */,
+				C15BC6002BBB465000C79750 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
