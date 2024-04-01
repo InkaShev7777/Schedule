@@ -8,16 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		C1CBF00C2BBAC9330057FEF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF00B2BBAC9330057FEF2 /* AppDelegate.swift */; };
-		C1CBF0102BBAC9330057FEF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF00F2BBAC9330057FEF2 /* ViewController.swift */; };
+		C1CBF0102BBAC9330057FEF2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF00F2BBAC9330057FEF2 /* MainTabBarController.swift */; };
 		C1CBF0152BBAC9330057FEF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1CBF0142BBAC9330057FEF2 /* Assets.xcassets */; };
+		C1CBF0232BBAEC0A0057FEF2 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF0222BBAEC0A0057FEF2 /* ScheduleViewController.swift */; };
+		C1CBF0252BBAEC260057FEF2 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF0242BBAEC260057FEF2 /* TasksViewController.swift */; };
+		C1CBF0272BBAEC360057FEF2 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF0262BBAEC360057FEF2 /* ContactsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C1CBF0082BBAC9330057FEF2 /* Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CBF00B2BBAC9330057FEF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1CBF00F2BBAC9330057FEF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C1CBF00F2BBAC9330057FEF2 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		C1CBF0142BBAC9330057FEF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1CBF0192BBAC9330057FEF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1CBF0222BBAEC0A0057FEF2 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		C1CBF0242BBAEC260057FEF2 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		C1CBF0262BBAEC360057FEF2 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +56,39 @@
 		C1CBF00A2BBAC9330057FEF2 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				C1CBF01F2BBAD2730057FEF2 /* Application */,
+				C1CBF0202BBAD2D10057FEF2 /* Controllers */,
+				C1CBF0212BBAD3100057FEF2 /* Resources */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		C1CBF01F2BBAD2730057FEF2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				C1CBF00B2BBAC9330057FEF2 /* AppDelegate.swift */,
-				C1CBF00F2BBAC9330057FEF2 /* ViewController.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C1CBF0202BBAD2D10057FEF2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C1CBF00F2BBAC9330057FEF2 /* MainTabBarController.swift */,
+				C1CBF0222BBAEC0A0057FEF2 /* ScheduleViewController.swift */,
+				C1CBF0242BBAEC260057FEF2 /* TasksViewController.swift */,
+				C1CBF0262BBAEC360057FEF2 /* ContactsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C1CBF0212BBAD3100057FEF2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				C1CBF0142BBAC9330057FEF2 /* Assets.xcassets */,
 				C1CBF0192BBAC9330057FEF2 /* Info.plist */,
 			);
-			path = Schedule;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,8 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1CBF0102BBAC9330057FEF2 /* ViewController.swift in Sources */,
+				C1CBF0232BBAEC0A0057FEF2 /* ScheduleViewController.swift in Sources */,
+				C1CBF0252BBAEC260057FEF2 /* TasksViewController.swift in Sources */,
+				C1CBF0102BBAC9330057FEF2 /* MainTabBarController.swift in Sources */,
 				C1CBF00C2BBAC9330057FEF2 /* AppDelegate.swift in Sources */,
+				C1CBF0272BBAEC360057FEF2 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +298,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Schedule/Info.plist;
+				INFOPLIST_FILE = Schedule/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -294,7 +330,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Schedule/Info.plist;
+				INFOPLIST_FILE = Schedule/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";

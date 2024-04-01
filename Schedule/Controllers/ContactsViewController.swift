@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ContactsViewController.swift
 //  Schedule
 //
 //  Created by Ilya Schevchenko on 01.04.2024.
@@ -7,14 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ContactsViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .red
+        title = "Contacts"
     }
-
-
 }
-
