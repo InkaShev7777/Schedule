@@ -27,6 +27,14 @@ class ScheduleViewController: UIViewController {
         return button
     }()
     
+    let tableView: UITableView = {
+        let tabel = UITableView()
+        tabel.translatesAutoresizingMaskIntoConstraints = false
+        return tabel
+    }()
+    
+    let idScheduleCell = "idScheduleCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Schedule"
@@ -35,6 +43,10 @@ class ScheduleViewController: UIViewController {
         calendar.dataSource = self
         
         calendar.scope = .week
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(ScheduleTableViewCell.self, forCellReuseIdentifier: idScheduleCell)
         
         setConstrains()
         swipeAction()
@@ -78,6 +90,34 @@ class ScheduleViewController: UIViewController {
     }
 }
 
+//MARK: UITableViewDataSource, UITableViewDelegate
+
+extension ScheduleViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 25
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: idScheduleCell, for: indexPath) as! ScheduleTableViewCell
+        
+        cell.textLabel?.text = "Cell: \(indexPath.row)"
+//        switch indexPath.row {
+//        case 0: cell.backgroundColor = .blue
+//        case 1: cell.backgroundColor = .red
+//        case 2: cell.backgroundColor = .yellow
+//        case 3: cell.backgroundColor = .green
+//        case 4: cell.backgroundColor = .gray
+//        default:
+//            break
+//        }
+        
+        return cell
+    }
+    
+  
+}
+
 //MARK: FSCalendarDataSource,FSCalendarDelegate
 
 extension ScheduleViewController: FSCalendarDataSource, FSCalendarDelegate {
@@ -97,6 +137,8 @@ extension ScheduleViewController: FSCalendarDataSource, FSCalendarDelegate {
 extension ScheduleViewController {
     
     func setConstrains() {
+        let safeArea = view.safeAreaLayoutGuide
+        
         view.addSubview(calendar)
         calendarHeightConstarint = NSLayoutConstraint(
             item: calendar,
@@ -109,7 +151,7 @@ extension ScheduleViewController {
         )
         calendar.addConstraint(calendarHeightConstarint)
         NSLayoutConstraint.activate(
-            [calendar.topAnchor.constraint(equalTo: view.topAnchor, constant: 90),
+            [calendar.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 0),
              calendar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
              calendar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
             ]
@@ -121,6 +163,15 @@ extension ScheduleViewController {
              showHideButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
              showHideButton.widthAnchor.constraint(equalToConstant: 100),
              showHideButton.heightAnchor.constraint(equalToConstant: 20)
+            ]
+        )
+        
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate(
+            [tableView.topAnchor.constraint(equalTo: showHideButton.bottomAnchor, constant: 10),
+             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+             tableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: 0)
             ]
         )
     }
